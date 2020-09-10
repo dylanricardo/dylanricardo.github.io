@@ -17,8 +17,11 @@
 	
 	<!-- Wrapper -->
 	<div id="wrapper">
-		<div id="language" style="left: 0; position: absolute;">
-			
+		<div style="left: -16px; position: absolute; height: 30px; width: 60px; background-color: #fff; border-radius: 16px; overflow: hidden;">
+			<a href="/index.html" id="language">
+				<i  id="ingles" style="color: blue; margin-left: 25px; margin-top: 7px; transition: all 1s;" class="fas fa-flag-usa"></i>
+				<img id="portugues" style="margin-left: 25px; margin-top: 5px; transition: all 1s;" src="/images/bandeira-do-brasil.png" alt="bandeira-do-brasil">
+			</a>
 		</div>
 		<!-- Header -->
 		<header id="header">
@@ -482,5 +485,16 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/email.js"></script>
 			<script src="assets/js/lazysizes.min.js" async></script>
+			<script>
+				$("#language").hover(function(){
+					console.log('Entrou');
+					$("#ingles").css('transform', 'translateY(-30px)')
+					$("#portugues").css('transform', 'translateY(-25px)')
+				},function(){
+					console.log('Saiu');
+					$("#ingles").css('transform', 'none')
+					$("#portugues").css('transform', 'none')
+				})
+			</script>
 		</body>
 		</html>
